@@ -1,0 +1,188 @@
+Index:
+	- Introduction.
+	- Managing packages.
+	- Commands.
+	- Editing files.
+	- Miscellaneous.
+
+
+Introduction:
+Linux is an open-source free-software operating system.
+The majority of servers worldwide are hosted in Linux.
+
+There are many distributions or distros like Ubuntu and Parrot.
+
+In Linux the root directory is a slash.
+In Linux everything is a file.
+In the root directory we can find the main directories:
+- bin: binaries or programmes.
+- boot: files related to starting the computer.
+- dev: files of devices.
+- etc: configuration files.
+- home: hosts our users.
+- root: only the root user can access here.
+- lib: libraries.
+- var: variables, files updated frequently.
+- proc: running processes.
+
+
+
+Managing packages:
+We have the APT (advanced package tool) interface to keep our system updated in
+case of wanting to install an app:
+$ apt
+$ apt list
+$ apt update
+$ apt install nano
+$ apt remove nano
+
+
+
+Commands:
+
+$ sudo: gives super user privileges, at the beginning of another command.
+
+$ ls: lists all files and directories in the current working directory.
+Flags:
+	-l: shows the file type and permission.
+	-R: shows sub-directories as well.
+	-a: shows hidden files as well.
+	-al: with detailed information like permissions, size, owner.
+
+$ cd: change to a particular directory.
+	directory_name
+	..
+	/
+
+$ cat: means concatenating.
+	file_name: displays its content.
+	-n file_name: displays its content and shows lines.
+	file1 file2: concatenates the two files and outputs them.
+	file1 file2 > file3: joins two files and stores the output in a new file.
+
+Example: $ cat file3.txt | grep --color carrots
+
+
+$ touch: creates files.
+	new_file
+
+$ mv: moves files.
+	file_name new_file_path
+
+$ cp: copies files.
+	file_name destination_path
+
+$ rm: removes files.
+	file_name
+
+$ man: gives help information on a command.
+$ history: gives a list of commands typed in the current terminal session.
+$ clear: clears the terminal.
+
+$ mkdir new_directory
+$ rmdir directory_to_be_removed
+
+$ chown: for changing the ownership of a file/directory.
+	user_name file_or_folder
+
+
+$ chmod: manages file permissions.
+rwxr-x---: permissions of user, user group, others.
+4 - r: read.
+2 - w: write.
+1 - x: execute.
+
+Examples:
+	$ chmod u+w file_name: user can write
+	$ chmod g+x file_name: group can execute
+	$ chmod u-r file_name: others can NOT read
+	$ chmod 751 file_name
+
+
+Environment variables:
+$ echo $variable: displays the value of a variable.
+$ env: displays all environment variables.
+$ variable_name = variable_value: creates a variable.
+$ Unset: removes a variable.
+$ export variable = value: to set value of an environment variable.
+
+User management:
+$ sudo adduser user_name
+$ sudo passwd -l user_name
+$ sudo userdel -r user_name
+$ sudo usermod -a -G group_name user_name: adds a user to a group.
+$ sudo deluser user_name group_name: removes a user from a group.
+$ finger: shows information of all the users logged in.
+$ finger user_name: gives information of a particular user.
+
+Networking:
+$ ssh user_name@ip_address_or_hostname: logins into a remote Linux machine.
+$ ping ip_adress_or_hostname: analyses network and host connections.
+$ dir: displays files in the current directory of the remote computer.
+$ put file_name: uploads a file from the local to the remote computer.
+$ get file:name: downloads a file from the remote to the local computer.
+$ quit
+
+Process:
+$ ps: gives the status of processes running for a user.
+$ ps process_id: gives the status of a particular process.
+$ bg: sends a process to the background.
+$ fg: runs a stopped process in the foreground.
+$ top: details on all active processes.
+$ pidof process_name: gives the process ID.
+$ kill process_id
+$ nice: starts a process with a given priority.
+$ renice: changes priority of an already running process.
+$ df: gives free hard disk space on your system.
+$ free: gives free RAM on your system.
+
+
+
+Editing files:
+i: insert a cursor.
+a: write after cursor.
+A: write at the end of line.
+ESC: terminate insert mode.
+u: undoes last change.
+
+
+
+Miscellaneous:
+
+$ du -sh /var/lib
+To see the weight of a folder. Flag -s means summming, -h means for human.
+
+$ stat readme.txt
+To see a lot of information about a file.
+
+$ zip -r images.zip images
+To compress a folder.
+
+$ unzip something.zip
+
+$ zipinfo images.zip
+To see the compressed file content without unzipping it.
+
+$ tree
+To see a tree of folder and files.
+
+$ find path -mtime +5
+To search files that have been modified more than 5 days ago.
+
+$ find path -iname 'filename*'
+To search files by name, insensitive case.
+
+$ cal 12 2003
+To see the calendar of December 2003.
+
+$ date
+To see the current date and time.
+
+$ curl https://page.com
+To see the webpage in a text format.
+
+$ curl ifconfig.me
+To see your own IP.
+
+$ df -h
+To see space available in disks.
