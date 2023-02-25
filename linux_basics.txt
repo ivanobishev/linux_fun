@@ -3,6 +3,7 @@ Index:
 	- Managing packages.
 	- Commands.
 	- Editing files.
+	- Processes.
 	- Miscellaneous.
 
 
@@ -123,7 +124,19 @@ $ put file_name: uploads a file from the local to the remote computer.
 $ get file:name: downloads a file from the remote to the local computer.
 $ quit
 
-Process:
+
+
+Editing files:
+
+$ vim file_name
+I -> enters insert mode.
+ESC -> ends insert mode.
+:q -> quits without saving.
+:wq -> saves and quites.
+
+
+
+Processes:
 $ ps: gives the status of processes running for a user.
 $ ps process_id: gives the status of a particular process.
 $ bg: sends a process to the background.
@@ -135,15 +148,6 @@ $ nice: starts a process with a given priority.
 $ renice: changes priority of an already running process.
 $ df: gives free hard disk space on your system.
 $ free: gives free RAM on your system.
-
-
-
-Editing files:
-i: insert a cursor.
-a: write after cursor.
-A: write at the end of line.
-ESC: terminate insert mode.
-u: undoes last change.
 
 
 
