@@ -137,17 +137,21 @@ ESC -> ends insert mode.
 
 
 Processes:
-$ ps: gives the status of processes running for a user.
-$ ps process_id: gives the status of a particular process.
+
+$ ps: gives the status of processes running.
+$ ps process_id: gives intel of a process.
+$ ps -u user_name | grep firefox
+$ kill process_id
+
+$ top: details on all active processes, sorted by CPU usage.
+
+$ jobs: lists jobs that the current shell is managing.
 $ bg: sends a process to the background.
 $ fg: runs a stopped process in the foreground.
-$ top: details on all active processes.
+
 $ pidof process_name: gives the process ID.
-$ kill process_id
 $ nice: starts a process with a given priority.
 $ renice: changes priority of an already running process.
-$ df: gives free hard disk space on your system.
-$ free: gives free RAM on your system.
 
 
 
@@ -190,3 +194,6 @@ To see your own IP.
 
 $ df -h
 To see space available in disks.
+
+$ free
+To see free RAM on your system.
